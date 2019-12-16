@@ -9,6 +9,8 @@ const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
+var multer = require('multer');
+var ObjectId = require('mongodb').ObjectID;
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -23,7 +25,7 @@ var db
 mongoose.connect(configDB.url, (err, database) => {
   if (err) return console.log(err)
   db = database
-  require('./app/routes.js')(app, passport, db);
+  require('./app/routes.js')(app, passport, db, multer, ObjectId );
 }); // connect to our database
 
 //app.listen(port, () => {
@@ -50,7 +52,7 @@ app.set('view engine', 'ejs'); // set up ejs for templating
 
 // required for passport
 app.use(session({
-    secret: 'rcbootcamp2019a', // session secret
+    secret: 'rcbootcamp2019b', // session secret
     resave: true,
     saveUninitialized: true
 }));

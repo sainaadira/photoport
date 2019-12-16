@@ -1,7 +1,15 @@
+
+* {
+box-sizing: border-box;
+}
+
 body{
   padding-top:80px;
   word-wrap:break-word;
 }
-img{
-  height: 200px;
+
+.portfolioImage {
+  border-radius: 20px;
+  height:300px;
+  width: 30%;
 }

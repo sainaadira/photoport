@@ -17,8 +17,8 @@
     <% } %>
 
     <!-- LOGIN FORM -->
-    <form action="/signup" method="post">
-        <div class="form-group">
+    <form action="/signup" method="POST">
+        <div>
             <label>Email</label>
             <input type="text" class="form-control" name="email">
         </div>
@@ -26,6 +26,44 @@
             <label>Password</label>
             <input type="password" class="form-control" name="password">
         </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="name" class="form-control" name="name">
+        </div>
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="username" class="form-control" name="username">
+        </div>
+
+        <div class="form-group">
+            <label>Pronouns</label>
+            <input type="pronouns" class="form-control" name="pronouns">
+        </div>
+
+        <div class="form-group">
+            <label>City</label>
+            <input type="city" class="form-control" name="city">
+        </div>
+
+        <div class="form-group">
+            <label>State</label>
+            <input type="state" class="form-control" name="state">
+        </div>
+
+        <div class="form-group">
+            <label>Experience Level</label>
+            <select name="experience">
+            <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+                <option value="professional">Professional</option>
+
+
+            </select>
+        </div>
+
+
 
         <button type="submit" class="btn btn-warning btn-lg">Signup</button>
     </form>
